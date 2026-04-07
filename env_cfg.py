@@ -383,7 +383,7 @@ class UnitreeGo2FlatGoalStandaloneEnvCfg_PLAY(UnitreeGo2FlatGoalStandaloneEnvCfg
     def __post_init__(self):
         super().__post_init__()
 
-        self.scene.num_envs = 50
+        self.scene.num_envs = 1
         self.scene.env_spacing = 2.5
         self.sim.physx.gpu_max_rigid_contact_count = 2**20
         self.sim.physx.gpu_max_rigid_patch_count = 2**15

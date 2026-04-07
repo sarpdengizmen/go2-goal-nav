@@ -50,7 +50,7 @@ No additional pip installs required beyond a standard IsaacLab setup.
 | Goal | Random XY point, 2–8 m from start, fixed for the episode |
 | Episode length | 8 seconds (400 steps at 50 Hz) |
 | Environments (training) | 4096 parallel |
-| Environments (play) | 50 |
+| Environments (play) | 1 |
 
 **Policy inputs (26-D observation vector):**
 | Term | Dim | Description |
@@ -126,7 +126,7 @@ Default training config: 1500 iterations, network `[128, 128, 128]`, PPO with ad
 ```bash
 python scripts/reinforcement_learning/rsl_rl/play.py \
     --task Isaac-Velocity-Flat-Goal-Standalone-Unitree-Go2-Play-v0 \
-    --num_envs 50
+    --num_envs 1
 ```
 
 The play variant uses the same trained checkpoint as the training task (checkpoint lookup strips `-Play` from the task name automatically). Goals are resampled 1 second after arrival, creating a continuous navigation demo.
