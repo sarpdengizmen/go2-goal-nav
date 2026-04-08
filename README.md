@@ -72,8 +72,8 @@ Intentionally excluded: `base_lin_vel` (not IMU-observable on hardware), `projec
 | Term | Weight | Role |
 |---|---|---|
 | `distance_to_goal` | −0.7 | Dense distance penalty — constant gradient to goal |
-| `goal_proximity` | +5.0 | Coarse Gaussian (std=1 m) — long-range approach |
-| `goal_proximity_fine` | +8.0 | Fine Gaussian (std=0.3 m) — precision braking funnel |
+| `goal_proximity` | +5.0 | Coarse Gaussian (std=1 m) |
+| `goal_proximity_fine` | +8.0 | Fine Gaussian (std=0.3 m) |
 | `heading_reward_to_goal` | +1.0 | Cosine similarity — faces goal, suppressed within 0.2 m |
 | `heading_penalty_to_goal` | −0.2 | Absolute heading error — corrects small drifts |
 | `termination_penalty` | −1000.0 | Fall penalty (intentionally dominant) |
