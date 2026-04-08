@@ -15,6 +15,7 @@ from isaaclab.envs.mdp import *  # noqa: F401, F403
 from .commands import PointGoalCommand, PointGoalCommandCfg  # noqa: F401
 from .rewards import (  # noqa: F401
     distance_to_goal,
+    feet_air_time,
     goal_proximity_exp,
     heading_penalty_to_goal,
     heading_reward_to_goal,
