@@ -63,7 +63,7 @@ def heading_penalty_to_goal(
 def heading_reward_to_goal(
     env: ManagerBasedRLEnv,
     command_name: str,
-    distance_threshold: float = 0.3,
+    distance_threshold: float = 0.5,
     asset_cfg: SceneEntityCfg = SceneEntityCfg("robot"),
 ) -> torch.Tensor:
     """Reward the robot for facing the goal proportional to cosine of the heading error.

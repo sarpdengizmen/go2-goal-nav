@@ -221,7 +221,7 @@ class _RewardsCfg:
     # Joint effort and jerk penalties
     dof_torques_l2 = RewTerm(func=mdp.joint_torques_l2, weight=-2.0e-4)
     dof_acc_l2 = RewTerm(func=mdp.joint_acc_l2, weight=-2.5e-7)
-    # Penalise sudden action changes — primary lever for gait smoothness
+    # Penalise sudden action changes 
     action_rate_l2 = RewTerm(func=mdp.action_rate_l2, weight=-0.15)
     # Reward periodic foot lift (encourages a proper gait)
     feet_air_time = RewTerm(
